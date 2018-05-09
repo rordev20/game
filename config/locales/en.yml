@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  validation:
+    custom_message:
+      only_binary: "Gamedata must be binary (contain only 0s and 1s)"
