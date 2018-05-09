@@ -1,0 +1,11 @@
+  [1m[35m (1565.6ms)[0m  [1m[35mCREATE DATABASE "game_development" ENCODING = 'unicode'[0m
+  ↳ /home/baldor/.rvm/gems/ruby-2.5.0/bin/rake:23
+  [1m[35m (669.5ms)[0m  [1m[35mCREATE DATABASE "game_test" ENCODING = 'unicode'[0m
+  ↳ /home/baldor/.rvm/gems/ruby-2.5.0/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-05-09 11:16:37 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/baldor/.rvm/gems/ruby-2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/baldor/.rvm/gems/ruby-2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
+Completed 200 OK in 47ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
