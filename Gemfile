@@ -39,9 +39,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # used for soft delete
 gem "paranoia", "~> 2.2"
 
+# multi-part file upload
+gem "paperclip", "~> 6.0.0"
+
+# passing content directly to javascript from controller
+gem 'gon'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do

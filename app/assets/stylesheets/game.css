@@ -1,0 +1,112 @@
+/* ===== General ===== */
+
+body {
+    min-width:1200px;
+    background-color:#eee;
+}
+
+h1 {
+    margin:0px 0px 15px 0px;
+    text-align:center;
+}
+
+table#lifegrid {
+    border-collapse:collapse;
+    border:5px solid #ccc;
+}
+
+table#lifegrid td {
+    font-size:0em;
+    border:1px solid #ddd;
+    padding:0px;
+}
+
+td.live {
+    background-color:#bbb;
+}
+
+td.dead {
+    background-color:#fff;
+}
+
+.toggle, #controls, #thegame{
+    -moz-user-select: none;
+     -khtml-user-select: none;
+     -webkit-user-select: none;
+     user-select: none;
+}
+
+#main {
+    border:1px solid #ccc;
+    background-color:#fff;
+    padding:8px;
+}
+
+#main h1 {
+    margin:5px 0px 15px 0px;
+    border:1px solid #aaa;
+    border-radius:8px;
+    padding:3px;
+    background-color:#fbfbfb;
+}
+
+.sidebar-container {
+  clear:both
+}
+
+.hidden-cls {
+  display: none;    
+}
+
+/* ===== Prefabs ===== */
+#prefabs {
+    margin-bottom:5px;
+    padding:10px 5px;
+    float:right;
+    height:100px;
+}
+.prefab {
+    float:left;;
+    height:80px;
+    width:80px;
+    background-color:#fafafa;
+    margin-left:5px;  
+    position:relative;
+    padding:0px;
+    background-image:url(/assets/drag-cross.png);
+    background-repeat:no-repeat;
+    background-position:95% 5%;
+}
+
+.prefab img {
+    display:block;
+    margin:0px auto;
+    padding:0px;
+}
+
+.prefab .button-label {
+    position:absolute; 
+    width:100%;
+    bottom:3px; 
+    margin:0px auto;
+    text-align:center;
+}
+
+/* ===== Game Area ===== */
+#thegame {
+    width:800px;
+    margin-top:10px;
+    float:left;
+}
+
+#thegame #tablearea {
+    width:900px;
+}
+
+#thegame table.running {
+    border-color:green;
+}
+
+.toggle, .prefab {
+    cursor:pointer;
+}

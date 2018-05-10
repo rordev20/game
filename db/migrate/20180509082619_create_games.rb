@@ -4,7 +4,7 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.string :title, limit: 100, null: false, unique: true
       t.integer :width
       t.integer :height
-      t.binary :gamedata
+      t.text :game_data
       t.boolean :is_active, null: false, default: true
       t.datetime :deleted_at
 

@@ -1,0 +1,37 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    g = NewGrid(<%= @game_board_width %>, <%= @game_board_height %>);
+    initializeGame();
+  });
+</script>
+<div id="main">
+  <div id="sidebar" class='hidden-cls'>
+    <div class="collapsiblesection">      
+      <div class="group">
+        <%= text_field_tag 'boxsize', get_box_size, id: 'boxsize' %>
+      </div>
+    </div> 
+    <%= text_field_tag 'gridwidth', @game_board_width, id: 'gridwidth' %> 
+    <%= text_field_tag 'gridheight', @game_board_height, id: 'gridheight' %>
+  </div>
+  <div id="controls">
+    <div id="buttonholder">
+      <button id="gamecontrol" value="stop">Run Simulation</button>
+    </div>
+  </div>
+  <div id="thegame">
+    <div id="tablearea">
+    </div>
+    <div id="prefabs">
+      <% @games.each do |game| %>
+        <%= button_tag :id => game.title, :class => "prefab" do %>
+         <%= image_tag(game.avatar.url, height: game.game_height_in_pixel, width: game.game_width_in_pixel) %>
+         <div class="button-label" ><%= game.title.capitalize %></div>
+        <% end %>
+      <% end %>      
+    </div>
+  </div>
+  <%= hidden_field_tag 'gamespeed', get_game_speed, id: "gamespeed" %>
+</div>
+
+
