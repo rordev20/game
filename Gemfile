@@ -67,6 +67,12 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-rails', '~> 3.7'
+  gem "factory_bot_rails", "~> 4.0"
+  gem 'faker', '~> 1.8', '>= 1.8.4'
+  gem 'shoulda', '~> 3.5'
+  gem 'simplecov', require: false
+  gem 'rails-controller-testing'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
