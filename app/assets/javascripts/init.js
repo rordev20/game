@@ -43,6 +43,6 @@ function initializeGame(){
         $(".prefab").removeClass("selected");
         $(this).addClass("selected");
         isDraggingShape = true;
-        Stop("Run Simulation", "Stop Simulation");
+        Stop("Start", "Stop");
     })
 }

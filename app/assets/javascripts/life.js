@@ -106,8 +106,8 @@ function Stop(runName, stopName) {
 
 function StartStop(grid) {
 	var status = $('#gamecontrol')[0].value;
-	var runName = "Run Simulation";
-	var stopName = "Stop Simulation";
+	var runName = "Start";
+	var stopName = "Stop";
 	
 	if(status == runName) {
         Stop(runName, stopName);
@@ -283,7 +283,7 @@ function Grid(width, height, data) {
     }
     
     this.AddGridToDOM = function(){
-        Stop("Run Simulation", "Stop Simulation");
+        Stop("Start", "Stop");
         var grid = this;
         var hex = 'FF5E5E';
         var colorfloor = '5E';
@@ -367,7 +367,7 @@ function RemoveShape(targetcell, shape, oldvals, grid) {
 }
 
 function DragShape(shape, grid) {
-    Stop("Run Simulation", "Stop Simulation");
+    Stop("Start", "Stop");
     $("body").css('cursor', 'pointer');
 	$("td").mouseover(function(){
 		RenderShape(this, shape, grid);

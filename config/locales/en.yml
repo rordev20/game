@@ -31,8 +31,15 @@
 
 en:
   hello: "Hello world"
+  global:
+    boxsize: "boxsize"
+    gridwidth: "gridwidth"
+    gridheight: "gridheight"
+    gamespeed: "gamespeed"
   validation:
     custom_message:
       only_binary: "Gamedata must be binary (contain only 0s and 1s)"
   custom_exception:
     setting_missing: "Game board setting missing %{setting_name}."
+  button:
+    start: "Start"

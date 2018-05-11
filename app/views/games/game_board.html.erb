@@ -8,15 +8,15 @@
   <div id="sidebar" class='hidden-cls'>
     <div class="collapsiblesection">      
       <div class="group">
-        <%= text_field_tag 'boxsize', get_box_size, id: 'boxsize' %>
+        <%= text_field_tag t('global.boxsize'), get_box_size, id: t('global.boxsize') %>
       </div>
     </div> 
-    <%= text_field_tag 'gridwidth', @game_board_width, id: 'gridwidth' %> 
-    <%= text_field_tag 'gridheight', @game_board_height, id: 'gridheight' %>
+    <%= text_field_tag t('global.gridwidth'), @game_board_width, id: t('global.gridwidth') %> 
+    <%= text_field_tag t('global.gridheight'), @game_board_height, id: t('global.gridheight') %>
   </div>
   <div id="controls">
     <div id="buttonholder">
-      <button id="gamecontrol" value="stop">Run Simulation</button>
+      <button id="gamecontrol" value="stop"><%= t('button.start') %></button>
     </div>
   </div>
   <div id="thegame">
@@ -31,7 +31,7 @@
       <% end %>      
     </div>
   </div>
-  <%= hidden_field_tag 'gamespeed', get_game_speed, id: "gamespeed" %>
+  <%= hidden_field_tag t('global.gamespeed'), get_game_speed, id: t('global.gamespeed') %>
 </div>
 
 
