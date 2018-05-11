@@ -16,8 +16,10 @@ class AppSetting < ApplicationRecord
 
   # this method return app setting value by name
   def self.get_value(name)
-    app_setting = self.active.where(name: name).first
-    app_setting ? app_setting.value : nil
+    Rails.cache.fetch ["app_setting_cache_", name], expires_in: 10.minutes do
+      app_setting = self.active.where(name: name).first
+      app_setting ? app_setting.value : nil
+    end
   end
 
 end
