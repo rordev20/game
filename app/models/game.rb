@@ -5,9 +5,14 @@ class Game < ApplicationRecord
   validates :title, presence: true, uniqueness: true
   validates :game_data, presence: true #, binary: true
   validates :width, :height, presence: true, numericality: { only_integer: true }
+  @@game_board_fields = %w{height width}.freeze
   scope :active, -> {where(is_active: true)}
 
-  ["height", "width"].each do |action|
+  #class accessors
+  cattr_accessor :game_board_fields
+
+  # dynamic method generation for pixels
+  Game.game_board_fields.each do |action|
     define_method("game_#{action}_in_pixel") do
       "#{self.send(action.to_sym)} px" 
     end

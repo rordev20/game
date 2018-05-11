@@ -58,6 +58,13 @@ td.dead {
   display: none;    
 }
 
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
 /* ===== Prefabs ===== */
 #prefabs {
     margin-bottom:5px;
